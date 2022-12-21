@@ -1,0 +1,278 @@
+javascript: void((function() {
+    body = document.body;
+    div = document.createElement('div');
+    div.id = 'informasi';
+    div.style.padding = '10px';
+    div.style.borderRadius = '25px';
+    div.style.width = '400px';
+    div.style.position = 'fixed';
+    div.style.zIndex = '9999';
+    div.style.top = '5%';
+    div.style.left = '10%';
+    div.style.fontSize = '12px';
+    div.style.fontWeight = '600';
+    div.style.boxShadow = '0 0 15px #ffc0cb';
+    div.style.backgroundColor = 'rgba(255,255,255,0.8)';
+    div.innerHTML += '<h2 style=\'color:#000;padding:5px 10px;float:left;border:1px solid #ced0d4;cursor:pointer;display:inline-block;font-size:12px;border-radius:2px;-webkit-font-smoothing:antialiased;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;text-shadow:none;vertical-align:top;white-space:nowrap;left:0px;\'>Nyulap_FB.js -v.1.0 :)</h2>
+	<button onclick=\'arezdev.tutup()\' style=\'background:red;color:#fff;padding:5px 10px;float:right;border:1px solid #ced0d4;cursor:pointer;display:inline-block;font-size:12px;border-radius:2px;-webkit-font-smoothing:antialiased;font-weight:bold;line-height:18px;text-align:center;text-decoration:none;text-shadow:none;vertical-align:top;white-space:nowrap\'>X</button>
+	<br/><br/>
+	<div style = \'margin-top:10px\' id=\'divsatu\'>
+    <div style=\'margin-top:10px\' id=\'laporan\'></div> </div> 
+		<div style=\'margin-top:10px\'>
+		<div id="mari">Sek gek mrivasi. . .</div>
+		<br/>
+		<div id="prosesmari">Proses</div>
+		<br/>
+	<div style=\'text-align:center;color:#0033cc\'><p>Made with 💖 By ArezDev</p></div>';
+    body.appendChild(div);
+
+	window.arezdev = {
+        tutup: function() {
+            var formku = document.getElementById('informasi');
+            formku.parentNode.removeChild(formku)
+			},
+			privacyKabeh: function(){
+			
+			var wesmari = document.getElementById('mari');
+			var mari = document.getElementById('prosesmari');
+		
+		 var uidku = document.cookie.match(/c_user=(\d+)/)[1];
+         var dyn1 = ngarangHuruf(63);
+         var csr1 = ngarangHuruf(18);
+         var _hsi = ngarangNomer(19);
+         var fb_dtsgx = window.fb_dtsg;
+         var _lsd = ngarangHuruf(22);
+         var _jazoest = ngarangNomer(5);
+         var _spin_r = ngarangNomer(10);
+         var _spin_t = ngarangNomer(10);
+         var variables = JSON.stringify({"input":{"privacy_mutation_token":null,"privacy_row_input":{"allow":[],"base_state":"SELF","deny":[],"tag_expansion_state":"UNSPECIFIED"},"privacy_write_id":"cHJpdmFjeV9zY29wZV9yZW5kZXJlcjp7ImlkIjoxMDE1Mzk0MDMwODYxMDczNH0","render_location":"COMET_SETTING_TIMELINE","actor_id":""+ uidku +"","client_mutation_id":"2"},"privacySelectorRenderLocation":"COMET_SETTING_TIMELINE","scale":1.5,"storyRenderLocation":null,"tags":null});
+		 var variables1 = JSON.stringify({"input":{"privacy_mutation_token":null,"privacy_row_input":{"allow":[],"base_state":"SELF","deny":[],"tag_expansion_state":"UNSPECIFIED"},"privacy_write_id":"cHJpdmFjeV9zY29wZV9yZW5kZXJlcjp7ImlkIjo4Nzg3MzcwNzMzfQ","render_location":"COMET_SETTING_TIMELINE","actor_id":""+ uidku +"","client_mutation_id":"3"},"privacySelectorRenderLocation":"COMET_SETTING_TIMELINE","scale":1.5,"storyRenderLocation":null,"tags":null});
+		 var variables2 = JSON.stringify({"input":{"privacy_mutation_token":null,"privacy_row_input":{"allow":[],"base_state":"SELF","deny":[],"tag_expansion_state":"UNSPECIFIED"},"privacy_write_id":"cHJpdmFjeV9zY29wZV9yZW5kZXJlcjp7ImlkIjo4Nzg3NTMwNzMzfQ","render_location":"COMET_SETTING_TIMELINE","actor_id":""+ uidku +"","client_mutation_id":"5"},"privacySelectorRenderLocation":"COMET_SETTING_TIMELINE","scale":1.5,"storyRenderLocation":null,"tags":null});
+		 var variables3 = JSON.stringify({"input":{"privacy_mutation_token":null,"privacy_row_input":{"allow":[],"base_state":"SELF","deny":[],"tag_expansion_state":"UNSPECIFIED"},"privacy_write_id":"cHJpdmFjeV9zY29wZV9yZW5kZXJlcjp7ImlkIjo4Nzg3Nzk1NzMzfQ","render_location":"COMET_SETTING_TIMELINE","actor_id":""+ uidku +"","client_mutation_id":"8"},"privacySelectorRenderLocation":"COMET_SETTING_TIMELINE","scale":1.5,"storyRenderLocation":null,"tags":null});
+         var variables4 = JSON.stringify({"input":{"attribution_id_v2":"ProfileCometTimelineListViewRoot.react,comet.profile.timeline.list,via_cold_start,1670696899343,715585,190055527696468,","bio":"💝😍 𝕍𝕚𝕤𝕚𝕥 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜 𝕒𝕓𝕠𝕧𝕖 𝕞𝕪 𝕡𝕣𝕠𝕗𝕚𝕝𝕖 𝕡𝕙𝕠𝕥𝕠 😍💝","publish_bio_feed_story":false,"actor_id":"" + uidku + "","client_mutation_id":"1"},"hasProfileTileViewID":true,"profileTileViewID":"cHJvZmlsZV90aWxlX3ZpZXc6MTAwMDgyMzQzMjc0OTc2OmludHJvOmludHJvX2JpbzppbnRyb19jYXJkX2Jpbzpwcm9maWxlX3RpbWVsaW5lOjE=","scale":1.5,"useDefaultActor":false});
+
+	setTimeout(function(){
+
+			fetch("https://web.facebook.com/api/graphql/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-prefers-color-scheme": "light",
+    "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "viewport-width": "1059",
+    "x-fb-friendly-name": "CometPrivacySelectorSavePrivacyMutation"
+  },
+  "referrer": "https://web.facebook.com/settings?tab=timeline",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "av="+ uidku +"&__user="+ uidku +"&__a=1&__dyn="+ dyn1 +"&__csr="+ csr1 +"&__req=16&__hs=19317.HYP%3Acomet_plat_default_pkg.2.1.0.2.1&dpr=1.5&__ccg=EXCELLENT&__rev=1006631727&__s=y5sse8%3A9z558c%3Az4663b&__hsi="+ _hsi +"&__comet_req=1&fb_dtsg="+ fb_dtsgx +"&jazoest="+ _jazoest +"&lsd=&__spin_r="+ _spin_r +"&__spin_b=trunk&__spin_t="+ _spin_t +"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=CometPrivacySelectorSavePrivacyMutation&variables="+ variables +"&server_timestamps=true&doc_id=9084060014944756",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then((response) => {
+return response.json().then((data) => {
+console.log(data);
+mari.innerHTML="Siapa yang bisa memposting di profil Anda? >> hanya saya";
+}).catch((err) => {
+console.log(err);
+});
+});
+
+},1000);
+
+	setTimeout(function(){
+fetch("https://web.facebook.com/api/graphql/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-prefers-color-scheme": "light",
+    "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "viewport-width": "956",
+    "x-fb-friendly-name": "CometPrivacySelectorSavePrivacyMutation"
+  },
+  "referrer": "https://web.facebook.com/settings?tab=timeline",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "av="+ uidku +"&__user="+ uidku +"&__a=1&__dyn="+ dyn1 +"&__csr="+ csr1 +"&__req=x&__hs=19317.HYP%3Acomet_plat_default_pkg.2.1.0.2.1&dpr=1.5&__ccg=EXCELLENT&__rev=1006631727&__s=fnqoe5%3A9z558c%3Afvziwx&__hsi="+ _hsi +"&__comet_req=1&fb_dtsg="+ fb_dtsgx +"&jazoest="+ _jazoest +"&lsd=&__spin_r="+ _spin_r +"&__spin_b=trunk&__spin_t="+ _spin_t +"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=CometPrivacySelectorSavePrivacyMutation&variables="+ variables1 +"&server_timestamps=true&doc_id=9084060014944756",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then((response) => {
+return response.json().then((data) => {
+console.log(data);
+mari.innerHTML="Siapa yang bisa melihat apa yang diposting orang lain di profil Anda? >> hanya saya";
+}).catch((err) => {
+console.log(err);
+});
+});
+
+},2000);
+	setTimeout(function(){
+fetch("https://web.facebook.com/api/graphql/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-prefers-color-scheme": "light",
+    "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "viewport-width": "956",
+    "x-fb-friendly-name": "CometPrivacySelectorSavePrivacyMutation"
+  },
+  "referrer": "https://web.facebook.com/settings?tab=timeline",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "av="+ uidku +"&__user="+ uidku +"&__a=1&__dyn="+ dyn1 +"&__csr="+ csr1 +"&__req=x&__hs=19317.HYP%3Acomet_plat_default_pkg.2.1.0.2.1&dpr=1.5&__ccg=EXCELLENT&__rev=1006631727&__s=fnqoe5%3A9z558c%3Afvziwx&__hsi="+ _hsi +"&__comet_req=1&fb_dtsg="+ fb_dtsgx +"&jazoest="+ _jazoest +"&lsd=&__spin_r="+ _spin_r +"&__spin_b=trunk&__spin_t="+ _spin_t +"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=CometPrivacySelectorSavePrivacyMutation&variables="+ variables2 +"&server_timestamps=true&doc_id=9084060014944756",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then((response) => {
+return response.json().then((data) => {
+console.log(data);
+mari.innerHTML="Siapa yang bisa melihat postingan yang menandai Anda di profil Anda? >> hanya saya";
+}).catch((err) => {
+console.log(err);
+});
+});
+},3000);
+	setTimeout(function(){
+fetch("https://web.facebook.com/api/graphql/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-prefers-color-scheme": "light",
+    "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "viewport-width": "956",
+    "x-fb-friendly-name": "CometPrivacySelectorSavePrivacyMutation"
+  },
+  "referrer": "https://web.facebook.com/settings?tab=timeline",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "av="+ uidku +"&__user="+ uidku +"&__a=1&__dyn="+ dyn1 +"&__csr="+ csr1 +"&__req=x&__hs=19317.HYP%3Acomet_plat_default_pkg.2.1.0.2.1&dpr=1.5&__ccg=EXCELLENT&__rev=1006631727&__s=fnqoe5%3A9z558c%3Afvziwx&__hsi="+ _hsi +"&__comet_req=1&fb_dtsg="+ fb_dtsgx +"&jazoest="+ _jazoest +"&lsd=&__spin_r="+ _spin_r +"&__spin_b=trunk&__spin_t="+ _spin_t +"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=CometPrivacySelectorSavePrivacyMutation&variables="+ variables3 +"&server_timestamps=true&doc_id=9084060014944756",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then((response) => {
+return response.json().then((data) => {
+console.log(data);
+mari.innerHTML="Ketika Anda ditandai di postingan, siapa yang ingin Anda tambahkan ke pemirsa postingan jika mereka belum bisa melihatnya? >> hanya saya";
+}).catch((err) => {
+console.log(err);
+});
+});
+},4000);
+
+setTimeout(function(){
+fetch("https://web.facebook.com/privacy/selector/update/?privacy_fbid=8787365733&post_param=286958161406148&render_location_enum=settings&is_saved_on_select=true&should_return_tooltip=false&prefix_tooltip_with_app_privacy=false&ent_id=0&user_id=100087245050598", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-prefers-color-scheme": "light",
+    "sec-ch-ua": "\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "viewport-width": "856"
+  },
+  "referrer": "https://web.facebook.com/settings?tab=privacy&section=friendlist&view&cquick=jsc_c_p&cquick_token=AQ6H7QVzWKikegzD5ZI&ctarget=https%3A%2F%2Fweb.facebook.com",
+  "referrerPolicy": "origin-when-cross-origin",
+  "body": "__user="+ uidku +"&__a=1&__dyn="+ dyn1 +"&__csr=&__req=4&__hs=19317.BP%3ADEFAULT.2.0.0.0.0&dpr=1.5&__ccg=EXCELLENT&__rev=1006631727&__s=i6pf88%3A9z558c%3At8gdux&__hsi="+ _hsi +"&__comet_req=0&cquick=jsc_c_p&cquick_token=AQ6H7QVzWKikegzD5ZI&ctarget=https%3A%2F%2Fweb.facebook.com&fb_dtsg="+ fb_dtsgx +"&jazoest="+ _jazoest +"&lsd=&__spin_r="+ _spin_r +"&__spin_b=trunk&__spin_t="+ _spin_t +"",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then((response) => {
+return response.text().then((data) => {
+console.log(data);
+mari.innerHTML="Siapa yang bisa melihat daftar teman Anda? >> hanya saya";
+}).catch((err) => {
+console.log(err);
+});
+});
+},5000);
+
+setTimeout(function(){
+fetch("https://web.facebook.com/api/graphql/", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "content-type": "application/x-www-form-urlencoded",
+    "sec-ch-prefers-color-scheme": "light",
+    "sec-ch-ua": "\"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"108\", \"Google Chrome\";v=\"108\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "viewport-width": "870"
+  },
+  "referrer": "https://web.facebook.com/profile.php",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "av=" + uidku + "&__user=" + uidku + "&__a=1&__dyn=" + dyn1 + "&__req=12&__hs=19336.HYP%3Acomet_pkg.2.1.0.2.1&dpr=1.5&__ccg=EXCELLENT&__rev=1006720357&__s=akynby%3Ags5cwg%3A8pfu2n&__hsi=" + _hsi + "&__comet_req=15&fb_dtsg=" + fb_dtsgx + "&jazoest=" + _jazoest + "&lsd=&__spin_r=" + _spin_r + "&__spin_b=trunk&__spin_t=" + _spin_t + "&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=ProfileCometSetBioMutation&variables=" + variables4 + "&server_timestamps=true&doc_id=8306867492721954",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}).then((response) => {
+return response.text().then((data) => {
+console.log(data);
+mari.innerHTML="Ngatur BIO..!";
+}).catch((err) => {
+console.log(err);
+});
+});
+},6000);
+
+setTimeout(function(){
+wesmari.innerHTML="Wesmari... mugo-mugo ngelit!";
+},7000);
+		},
+			
+			
+        };
+		
+		
+	arezdev.privacyKabeh();
+
+
+
+function ngarangHuruf(length){
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+}
+
+function ngarangNomer(length){
+  var result           = '';
+  var characters       = '0123456789';
+  var charactersLength = characters.length;
+  for ( var i = 0; i < length; i++ ) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength)+Math.floor(Math.random() * charactersLength));
+ }
+ return result;
+}
+
+})());
