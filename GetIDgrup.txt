@@ -1,0 +1,5 @@
+javascript:(function(){
+
+prompt("iki Id Grup e:",document.querySelector('meta[property="al:android:url"]').content.split("fb://group/")[1]);
+
+})()

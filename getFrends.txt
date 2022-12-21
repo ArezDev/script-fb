@@ -1,0 +1,47 @@
+javascript:(function(){
+
+var uide = document.cookie.match(/c_user=(\d+)/)[1];
+var fb_dtsgne = window.fb_dtsg;
+var dynne = ngarangHuruf(63);
+
+fetch("https://web.facebook.com/ajax/typeahead/first_degree.php?dpr=1&__a=1&__af=iw&__be=&__pc=PHASED:DEFAULT&__user="+ uide +"&__dyn="+ dynne +"&__req=8&__rev=1033590&fb_dtsg="+ fb_dtsgne +"&jazoest=&__spin_r=3078884&__spin_b=trunk&__spin_t=1497057008&viewer="+ uide +"&token=0.28308574678664544&filter[0]=user&options[0]=friends_only", {
+headers: {
+accept: "*/*",
+},
+referrer: "https://web.facebook.com/",
+referrerPolicy: "strict-origin-when-cross-origin",
+body: null,
+method: "GET",
+mode: "cors",
+credentials: "include"
+}).then((response) => {
+return response.text().then((data) => {
+var hasil = data.split("for (;;);")[1];
+var hasilJSON = JSON.parse(hasil);
+console.log(hasilJSON);
+var divisions = hasilJSON.payload.entries;
+
+console.log(divisions);
+console.log(divisions[1].uid);
+
+for (var i=1; i < divisions.length; i++) {
+    
+    console.log(divisions[i].uid);
+}
+
+}).catch((err) => {
+console.log(err);
+});
+});
+
+function ngarangHuruf(length) {
+	var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   return result;
+		}
+
+})()
