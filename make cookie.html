@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+        function checkFB(){
+            var myUID = document.getElementById("uid").value;
+            var targetUID = document.getElementById("uid").value;
+            var akune = document.getElementById("result");
+            var passe = document.getElementById("pwne").value;
+            var totalUID = targetUID.split("\n").length;
+            document.getElementById("total").innerHTML=totalUID;
+            var count = 0;
+            var hitungUrip = 0;
+            var hitungMati = 0;
+            var goCeker=setInterval(function(){
+              if(count < totalUID){
+                document.getElementById("proces").innerHTML=count;
+                document.getElementById("petekan").style="background:grey;"
+                document.getElementById("petekan").innerHTML="Proses.."
+                var fullUID = targetUID.split("\n")[count];
+                var exactUID = myUID.split("\n")[count];
+                var exUID = exactUID.match(/c_user=(\d+)/i)[1];
+                akune.value += exUID + "|" + passe + "|" + fullUID;
+              count++;
+              } else {
+                  clearInterval(goCeker);
+                document.getElementById("petekan").style="background:green;"
+                document.getElementById("petekan").innerHTML="Done!"
+              }
+            },500);
+        }
+        </script>
+    </head>
+    <body>
+    <div style="height:650px;border-radius: 3px;border: 1px solid rgba(255, 192, 225, 0.8);" class="container">     
+<center><h4>Buat Cokis FB -By ArezDev</h4></center>  
+<br/>
+     <div class="input-group">
+    <textarea id="uid" style="width: 350%;height: 200px;border: 0px solid #e7e7e7;padding: 15px 20px;font-size: 1rem;border-radius: 5px;background: rgba(255, 235, 245, 0.8);outline: none;transition: .3s;resize: none;" onfocus="this.select()" placeholder="COKIS seng ape dicek"></textarea>
+         <br/>
+    <textarea id="pwne" style="width: 60%;height: 50px;border: 0px solid #e7e7e7;padding: 15px 20px;font-size: 1rem;border-radius: 5px;background: rgba(255, 235, 245, 0.8);outline: none;transition: .3s;resize: none;" onfocus="this.select()" placeholder="Password!.."></textarea>
+  </div>
+   <div class="input-group">
+       <br/>
+    <button style="background:pink;width: 100px;" class="btn btn-success" id="petekan" onClick="checkFB();">Gas!!</button> Total: <font id="proces">0</font> / <font id="total">0</font>
+  </div>
+       <div class="input-group">
+       <br/>
+    <textarea id="result" style="width: 350%;height: 100px;border: 0px solid #e7e7e7;padding: 15px 20px;font-size: 1rem;border-radius: 5px;background: rgba(255, 235, 245, 0.8);outline: none;transition: .3s;resize: none;" onfocus="this.select()" placeholder="Result!.."></textarea>
+</div>
+     <br/>
+<center><p>Made with ðŸ’– By <a href='https://fb.me/Mr.D4rk.Corpotion'>ArezDev</a></p></center>
+ </div>
+    </body>
+</html>

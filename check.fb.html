@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--<script src="/tools/check.fb/emboh_opo.js"></script>-->
+    <script>
+        function cek(){
+           var getAll = document.getElementById("uid").value.split("\n");
+           var countAll = getAll.length;
+           var live = document.getElementById("live");
+           var dead = document.getElementById("dead");
+           var liveC = document.getElementById("liveC");
+           var deadC = document.getElementById("deadC");
+           var countLive = 0;
+           var countDead = 0;
+           var optionMode = document.getElementById("mode_cokis");           
+        for(var i = 0; i < countAll; i++){
+           if(optionMode[0]){
+           var getSpecific = getAll[i].split("|")[0];
+           }
+           else if(optionMode[1]){
+           var getSpecific = getAll[i].match(/c_user=(\d+)/i)[1];
+           }
+          var FullSpecific = document.getElementById("uid").value.split("\n");
+            fetch("https://graph.facebook.com/"+ getSpecific +"/picture?type=normal")
+            .then(async (response) =>{
+              try {
+                let r = await response.url;
+                console.log(r)
+                if(r.match(/C5yt7Cqf3zU/g)){
+                    countDead++
+                    deadC.innerHTML=countDead;
+                    console.log("mati");
+                    dead.value += FullSpecific[i] + "\n";
+                } 
+                else {
+                    countLive++
+                    liveC.innerHTML=countLive;
+                    console.log("hidup");
+                    live.value += FullSpecific[i] + "\n";
+                }
+              } catch (error) {
+                console.log(error)
+              }
+            })
+           }
+        }
+        function CheckMe(gas=true, process=null, hidup=null, mati=null){
+           var getAll = document.getElementById("uid").value.split("\n");
+           var countAll = getAll.length;
+           var live = document.getElementById("live");
+           var dead = document.getElementById("dead");
+           var liveC = document.getElementById("liveC");
+           var deadC = document.getElementById("deadC");
+           var AllC = document.getElementById("AllC");
+           var BtnGas = document.getElementById("petekan");
+           var optionMode = document.getElementById("mode_cokis").value;
+           AllC.innerHTML=countAll;
+    if(gas == true && process < countAll){
+      BtnGas.innerHTML="Process.."
+      BtnGas.style="background:grey;width: 100px;"
+        setInterval(function(){
+           if(optionMode=="uidpass"){
+           console.log("uid pass")
+           var getSpecific = getAll[process].split("|")[0];          
+           }
+           else if(optionMode=="cokisonly"){
+           console.log("cokis only")
+           var getSpecific = getAll[process].match(/c_user=(\d+)/i)[1];
+           }
+            var FullSpecific = document.getElementById("uid").value.split("\n");
+            fetch("https://graph.facebook.com/"+ getSpecific +"/picture?type=normal")
+            .then(async (response) =>{
+              try {
+                let r = await response.url;
+                console.log(r);
+                if(r.match(/C5yt7Cqf3zU/g)){
+                    console.log("mati");
+                    dead.value += FullSpecific[process] + "\n";
+                    deadC.innerHTML = mati += 1;
+                    console.log(mati);
+                } 
+                else if(r.match(/scontent/g)) {
+                    console.log("hidup");
+                    live.value += FullSpecific[process] + "\n";
+                    liveC.innerHTML = hidup += 1;
+                    console.log(hidup);
+                }
+                if(response.url){
+                    console.log("Lanjut! loop");
+                        process+=1;
+                        CheckMe(true, process, hidup, mati);
+                    }
+              } catch (error) {
+                console.log(error)
+              }
+            })
+        })
+    } else {
+            BtnGas.innerHTML="Done..!"
+            BtnGas.style="background:green;width: 100px;"
+        }       
+}    
+    </script>
+    </head>
+    <body>
+    <div style="height:650px;border-radius: 3px;border: 1px solid rgba(255, 192, 225, 0.8);" class="container">     
+<center><h4>Cek Kesehatan Akun FB -By ArezDev</h4></center>  
+<br/>
+     <div class="input-group">
+    <textarea wrap="off" id="uid" style="width: 335%;height: 200px;border: 0px solid #e7e7e7;padding: 15px 20px;font-size: 1rem;border-radius: 5px;background: rgba(255, 235, 245, 0.8);outline: none;transition: .3s;resize: none;" onfocus="this.select()" placeholder="COKIS seng ape dicek"></textarea>
+  </div>
+   <div class="input-group">
+    <br/>
+Check FB Mode:
+  <select id="mode_cokis" class="form-select">
+  <option value="uidpass">UID|PASS|COOKIE</option>
+  <option value="cokisonly">COOKIE ONLY</option>
+</select>
+       <br/>
+       <br/>
+    <button style="background:pink;width: 100px;" class="btn btn-success" id="petekan" onClick="CheckMe(true, 0, 0, 0)">Gas!!</button> Urip: <font id="liveC" style="color: green;">0</font> | Mati: <font id="deadC" style="color: red;">0</font> | Total Akun: <font id="AllC">0</font>
+  </div>
+       <div class="input-group">
+       <br/>
+    <textarea wrap="off" id="live" style="width: 335%;height: 100px;border: 0px solid #e7e7e7;padding: 15px 20px;font-size: 1rem;border-radius: 5px;background: green;outline: none;transition: .3s;resize: none;" onfocus="this.select()" placeholder="Seng urip.."></textarea>
+            <br/>
+    <textarea wrap="off" id="dead" style="width: 335%;height: 100px;border: 0px solid #e7e7e7;padding: 15px 20px;font-size: 1rem;border-radius: 5px;background: red;outline: none;transition: .3s;resize: none;" onfocus="this.select()" placeholder="Seng bongko.."></textarea>
+     </div>
+     <br/>
+<center><p>Made with ❤ By <a href='https://fb.me/Mr.D4rk.Corpotion'>ArezDev</a></p></center>
+ </div>
+    </body>
+</html>
